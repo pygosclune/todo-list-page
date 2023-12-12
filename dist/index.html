@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="content">
+        <header id="mainHeader">
+            <h1>Todo list</h1>
+        </header>
+        
+        <div class="sidebar">
+            <ul id="nav">
+            </ul>
+        </div>
+        <div class="main-container">
+            <div id="main">
+            </div>
+        </div>
+    </div>
+
+    <div id="form-pop-up">
+        <form id="add-todo">
+            <input type="text" id="todo-title" name="title" placeholder="Title" required>
+            <input type="text" id="todo-details" name="details" placeholder="Details" required>
+            <label for="todo-date">Due date:</label>
+            <input type="date" id="todo-date" name="dueDate" required>
+            <p>Priority:</p>
+            <div>
+                <input type="radio" id="low" name="priority" value="low" checked>
+                <label for="low">Low</label><br>
+                <input type="radio" id="medium" name="priority" value="medium">
+                <label for="medium">Medium</label><br>
+                <input type="radio" id="high" name="priority" value="high">
+                <label for="high">High</label>
+            </div>
+            <input type="submit" id="todo-submit" value="Confirm Add Todo">
+        </form>
+    </div>
+    <div id="details-pop-up">
+        <div class="detailsTitle">Magbe</div>
+        <div class="detailsDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat reprehenderit facilis rerum eum quis nemo sed</div>
+        <div class="detailsDate">29-12-2023</div>
+    </div>
+    <script src="../src/index.js" type="module"></script>
+</body>
+</html>

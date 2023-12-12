@@ -1,0 +1,122 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("assets/WOODGRAIN.svg");
+    background-size: cover;
+    font-family: 'Montserrat', Courier, monospace;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-pop-up, #details-pop-up {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#add-todo {
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    width: 100rem;
+    height: 50rem;
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    grid-template-columns: 2fr 8fr;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.8);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #FFC47E;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    padding: 1rem;
+}
+
+.sidebar {
+    background-color: #ececec;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    overflow: hidden;
+    overflow-y: overlay;
+}
+
+#nav {
+    list-style: none;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    margin-left: 1rem;
+    margin-top: 2rem;
+}
+
+.projects-heading {
+    font-size: 2rem;
+    border-bottom: 0.3rem solid black;
+}
+
+#nav > li:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+#nav > li:not(.projects-heading) {
+    cursor: pointer;
+}
+
+.main-container {
+    background-color: #f6f6f6;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    overflow-y: auto;
+    padding: 4rem;
+}
+
+.todo {
+    display: flex;
+    background-color: #ececec;
+    padding: 1rem;
+    justify-content: space-between;
+    border-radius: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.low {
+    border-top: 0.5rem solid green;
+}
+
+.medium {
+    border-top: 0.5rem solid orange;
+}
+
+.high {
+    border-top: 0.5rem solid red;
+}
+
+.todoDelete, .todoAdd, .todoDetails, .projectAdd, .todoExit, .formCancel {
+    cursor: pointer;
+}
+
+.projectAdd {
+    margin-left: auto;
+}
+
+.active-project {
+    color: white;
+}
+
+#details-pop-up {
+    background-color: bisque;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.8);
+    padding: 5rem;
+}
